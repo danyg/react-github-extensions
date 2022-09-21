@@ -1,0 +1,10 @@
+.mainList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainList .listElement {
+  padding: 0px 0px var(--vertical-padding) 0px;
+  margin: 0;
+}

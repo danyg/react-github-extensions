@@ -1,0 +1,19 @@
+.Home {
+  background-color: var(--color-2);
+  color: #eee;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+
+  padding: var(--vertical-padding) var(--horizontal-padding);
+}
+.input label {
+  color: var(--text-color);
+  line-height: 1.5em;
+}
