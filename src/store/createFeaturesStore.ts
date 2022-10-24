@@ -1,5 +1,6 @@
 import {
   applyMiddleware,
+  CombinedState,
   combineReducers,
   createStore,
   PreloadedState,
@@ -25,7 +26,7 @@ const featuresToReducersMap = (
 
 export function createFeaturesStore<StateType>(
   features: Feature[],
-  initialState?: PreloadedState<StateType>
+  initialState?: PreloadedState<CombinedState<StateType>>
 ): Store<StateType, AppAction> {
   const sagasMiddleware = createSagaMiddleware();
   const sagas = features.map(featureToSaga);
@@ -37,7 +38,7 @@ export function createFeaturesStore<StateType>(
   const rootSaga = createRootSaga(sagas);
   const rootReducer = combineReducers<StateType, AppAction>(reducers);
 
-  const store = createStore<StateType, AppAction, any, any>(
+  const store = createStore<CombinedState<StateType>, AppAction, any, any>(
     rootReducer,
     initialState,
     applyMiddleware(sagasMiddleware)

@@ -24,7 +24,7 @@ describe("Github Service", () => {
         });
         expect("Enter here").toBe("is a failure");
       } catch (e) {
-        const error: RepositoryNotFound = e;
+        const error = e as RepositoryNotFound;
         expect(error).toBeInstanceOf(RepositoryNotFound);
         expect(error.owner).toBe("ownerNotFound");
         expect(error.repo).toBe("repoNotFound");
@@ -36,7 +36,7 @@ describe("Github Service", () => {
         await getFileListFromRepo({ owner: "owner500", repo: "repo500" });
         expect("Enter here").toBe("is a failure");
       } catch (e) {
-        const error: ServiceUnreachable = e;
+        const error = e as ServiceUnreachable;
         expect(error).toBeInstanceOf(ServiceUnreachable);
         expect(error.fn).toBe(getFileListFromRepo);
       }
@@ -47,7 +47,7 @@ describe("Github Service", () => {
         await getFileListFromRepo({ owner: "owner503", repo: "repo503" });
         expect("Enter here").toBe("is a failure");
       } catch (e) {
-        const error: ServiceUnreachable = e;
+        const error = e as ServiceUnreachable;
         expect(error).toBeInstanceOf(ServiceUnreachable);
         expect(error.fn).toBe(getFileListFromRepo);
       }
@@ -58,7 +58,7 @@ describe("Github Service", () => {
         await getFileListFromRepo({ owner: "owner400", repo: "repo400" });
         expect("Enter here").toBe("is a failure");
       } catch (e) {
-        const error: ServiceUnreachable = e;
+        const error = e as ServiceUnreachable;
         expect(error).toBeInstanceOf(ServiceUnreachable);
         expect(error.fn).toBe(getFileListFromRepo);
       }
@@ -72,7 +72,7 @@ describe("Github Service", () => {
         });
         expect("Enter here").toBe("is a failure");
       } catch (e) {
-        const error: ServiceUnreachable = e;
+        const error = e as ServiceUnreachable;
         expect(error).toBeInstanceOf(ServiceUnreachable);
         expect(error.fn).toBe(getFileListFromRepo);
       }
@@ -86,7 +86,7 @@ describe("Github Service", () => {
         });
         expect("Enter here").toBe("is a failure");
       } catch (e) {
-        const error: RepositoryNotFound = e;
+        const error = e as RepositoryNotFound;
         expect(error).toBeInstanceOf(RepositoryNotFound);
         expect(error.owner).toBe("ownerDeep404");
         expect(error.repo).toBe("repoDeep404");

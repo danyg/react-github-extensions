@@ -20,7 +20,7 @@ type ExtensionsState = extensionFeature.types.FeatureState;
 type FeatureState = feature.types.FeatureState;
 type State = ExtensionsState & FeatureState;
 
-const preloadState: State = {
+const preloadState: Partial<State> = {
   extensions: {
     loading: false,
     locator: { owner: "o", repo: "r" },
@@ -29,7 +29,7 @@ const preloadState: State = {
   }
 };
 
-function getStore(initialState: PreloadedState<State>) {
+function getStore(initialState: Partial<PreloadedState<State>>) {
   return createFeaturesStore<State>([feature, extensionFeature], initialState);
 }
 
@@ -162,7 +162,7 @@ describe("ExtensionSort", () => {
         direction: SortDirection.DESC
       };
       store.dispatch(sortBy(sortOptions));
-      store.dispatch(sortBy());
+      store.dispatch(sortBy(undefined));
 
       const keys = Object.keys(
         selectCurrent(store.getState()) as ExtensionCount
@@ -184,12 +184,12 @@ describe("ExtensionSort", () => {
       extensions: {
         ...preloadState.extensions,
         data: {
-          ...preloadState.extensions.data,
+          ...preloadState?.extensions?.data,
           js: 20
         }
       }
     };
-    const store = getStore(state);
+    const store = getStore(state as State);
     const search: string = "js";
     const sortOptions: SortOptions = {
       type: SortType.Value,

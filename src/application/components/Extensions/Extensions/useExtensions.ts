@@ -14,7 +14,6 @@ const {
   selectors: {
     selectLocator,
     isLoading: isLoadingSelector,
-    isError: isErrorSelector,
     selectError
   },
   actions: { request }
@@ -30,7 +29,7 @@ function getErrorString(error: FeatureError | undefined, locator: RepoLocator) {
 }
 
 export default function useExtensions() {
-  const locator = useParams<RepoLocator>();
+  const locator = useParams<RepoLocator>() as RepoLocator;
 
   const currentLocator = useSelector(selectLocator);
   const isLoading = useSelector(isLoadingSelector);
