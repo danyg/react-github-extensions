@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "../Home";
-import NotFound from "../NotFound";
-import Extensions from "../Extensions";
+import Home from "features/baseApplication/components/Home";
+import NotFound from "features/baseApplication/components/NotFound";
+import Extensions from "features/extensions/components/Extensions";
 
 export default function RouteHandler() {
   return (

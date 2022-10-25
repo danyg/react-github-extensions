@@ -1,11 +1,8 @@
 import { useSelector } from "react-redux";
-import {
-  selectLocator,
-  isLoading
-} from "features/extensions/selectors";
+import { selectLocator, isLoading } from "features/extensions/selectors";
 
-import SortTool from "./SortTool";
-import Search from "./Search";
+import SortTool from "features/extensionsTransformations/components/SortTool";
+import Search from "features/extensionsTransformations/components/Search";
 
 import styles from "./NavBar.module.css";
 
@@ -22,9 +19,13 @@ export default function NavBar() {
         {locator.owner} / {locator.repo}
       </div>
 
-      <SortTool />
+      <div className={styles.tool}>
+        <SortTool />
+      </div>
 
-      <Search />
+      <div className={styles.tool}>
+        <Search />
+      </div>
     </div>
   );
 }

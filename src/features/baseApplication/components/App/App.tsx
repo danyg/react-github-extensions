@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Store } from "redux";
 import { Provider } from "react-redux";
 
-import { AppState } from "application/types";
-import RouteHandler from "application/components/RouteHandler";
+import { AppState } from "features/types";
+import RouteHandler from "features/baseApplication/components/RouteHandler";
 
 import "./App.css";
 

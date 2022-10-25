@@ -1,5 +1,5 @@
 import createAppStore from "./appStore";
-import App from "./components/App";
+import App from "features/baseApplication/components/App";
 
 const store = createAppStore();
 

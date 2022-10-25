@@ -3,7 +3,7 @@ import * as extensionsTransformationsFeature from "features/extensionsTransforma
 import { SortDirection, SortOptions, SortType } from "core";
 import { sortBy } from "features/extensionsTransformations/actions";
 
-import styles from "../NavBar.module.css";
+import styles from "features/extensions/components/Extensions/NavBar/NavBar.module.css"; // TODO make it part of this or create a generic button
 
 const {
   selectors: { selectSortOptions }

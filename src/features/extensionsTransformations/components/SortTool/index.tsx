@@ -1,4 +1,3 @@
-import styles from "../NavBar.module.css";
 import useSortTool from "./useSortTool";
 
 export default function SortTool() {
@@ -12,7 +11,7 @@ export default function SortTool() {
   } = useSortTool();
 
   return (
-    <div className={styles.tool}>
+    <>
       <h2>Sort:</h2>
       <button
         type="button"
@@ -34,6 +33,6 @@ export default function SortTool() {
           {countDirection}
         </span>
       </button>
-    </div>
+    </>
   );
 }
