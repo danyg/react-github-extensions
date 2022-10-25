@@ -3,7 +3,7 @@ import treesResponse from "./__fixtures__/trees.response.ok";
 import matchingRefs from "./__fixtures__/matching-refs.response.ok";
 import matchingRefsDeep500 from "./__fixtures__/matching-refs.deep500.response.ok";
 import matchingRefsDeep404 from "./__fixtures__/matching-refs.deep404.response.ok";
-import { RepoLocator } from "../../core/types";
+import { RepoLocator } from "core/types";
 
 const getBranch = (name: string, { owner, repo }: RepoLocator) => {
   return {

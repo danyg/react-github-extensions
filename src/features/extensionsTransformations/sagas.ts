@@ -1,9 +1,10 @@
 import { all, put, select, takeLatest } from "redux-saga/effects";
+import { Entries, ExtensionCount, sort, SortOptions } from "core";
+
 import { searchBy, sortBy, transform } from "./actions";
 import { selectSearch, selectSortOptions } from "./selectors";
 import { selectData } from "../extensions/selectors";
 import { transformationSuccess } from "../extensions/actions";
-import { Entries, ExtensionCount, sort, SortOptions } from "../../core";
 
 function* handleSearch() {
   const search: string = yield select(selectSearch);

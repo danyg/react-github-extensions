@@ -4,7 +4,7 @@ import {
   SortDirection,
   SortOptions,
   SortType
-} from "../models";
+} from "core/models";
 
 type SortFunction = (a: ExtensionCountEntry, b: ExtensionCountEntry) => number;
 type DirectionSortFunctions = {

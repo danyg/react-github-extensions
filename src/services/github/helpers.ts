@@ -1,10 +1,10 @@
-import { RepoLocator } from "../../core/types";
+import { RepoLocator } from "core/types";
 import {
   MainBranchNotFound,
   RepositoryNotFound,
   ServiceUnreachable
-} from "../../core/models/errors";
-import { FileList, FileListElementType } from "../../core/models";
+} from "core/models/errors";
+import { FileList, FileListElementType } from "core/models";
 import { GithubBranches, GitHubTree } from "./types";
 
 const throwRepoNotFound = (repoLocator: RepoLocator) => {

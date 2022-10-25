@@ -1,9 +1,9 @@
-import { RepoLocator, ExtensionCount } from "../../core";
+import { RepoLocator, ExtensionCount } from "core";
 import {
   MainBranchNotFound,
   RepositoryNotFound,
   ServiceUnreachable
-} from "../../core/models/errors";
+} from "core/models/errors";
 
 export type FeatureError =
   | RepositoryNotFound

@@ -1,4 +1,4 @@
-import { FileListElementType } from "../core/models";
+import { FileListElementType } from "core/models";
 
 export const expectedFileList = [
   {

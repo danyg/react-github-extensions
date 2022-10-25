@@ -5,10 +5,10 @@ import {
   MainBranchNotFound,
   RepositoryNotFound,
   ServiceUnreachable
-} from "../../core/models/errors";
-import { makeApiGithubServerBeforeEachTest } from "../../test/servers/api-github.server";
-import { FileList } from "../../core/models";
-import { expectedFileList } from "../../test/expectedFileList";
+} from "core/models/errors";
+import { makeApiGithubServerBeforeEachTest } from "test/servers/api-github.server";
+import { FileList } from "core/models";
+import { expectedFileList } from "test/expectedFileList";
 
 import { getFileListFromRepo } from "./";
 

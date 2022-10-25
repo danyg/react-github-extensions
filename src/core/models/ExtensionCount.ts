@@ -1,4 +1,4 @@
-import { ArrayElement, Entries } from "../types";
+import { ArrayElement, Entries } from "core/types";
 
 export type ExtensionCount = {
   [key: string]: number;

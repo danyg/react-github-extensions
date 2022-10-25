@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import * as extensionsTransformationsFeature from "../../../../../features/extensionsTransformations";
-import { SortDirection, SortOptions, SortType } from "../../../../../core";
-import { sortBy } from "../../../../../features/extensionsTransformations/actions";
+import * as extensionsTransformationsFeature from "features/extensionsTransformations";
+import { SortDirection, SortOptions, SortType } from "core";
+import { sortBy } from "features/extensionsTransformations/actions";
 
 import styles from "../NavBar.module.css";
 

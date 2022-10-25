@@ -1,5 +1,5 @@
-import { RepoLocator } from "../../core/types";
-import { FileList } from "../../core/models";
+import { RepoLocator } from "core/types";
+import { FileList } from "core/models";
 import {
   adaptGithubTreeToCoreFileList,
   createErrorHandler,

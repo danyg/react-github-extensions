@@ -1,4 +1,4 @@
-import { AppAction, isAction } from "../../store";
+import { AppAction, isAction } from "store";
 import { failure, request, success, transformationSuccess } from "./actions";
 import { FeatureState } from "./types";
 

@@ -1,4 +1,4 @@
-import { SortOptions } from "../../core";
+import { SortOptions } from "core";
 
 export type FeatureState = {
   extensionsTransformations: {

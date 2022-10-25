@@ -1,4 +1,4 @@
-import { Feature } from "../store";
+import { Feature } from "store";
 
 import * as extensions from "./extensions";
 import * as extensionsTransformations from "./extensionsTransformations";

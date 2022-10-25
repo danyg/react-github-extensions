@@ -1,11 +1,11 @@
+import React, { useState } from "react";
 import { Store } from "redux";
 import { Provider } from "react-redux";
 
-import { AppState } from "../../types";
-import RouteHandler from "../RouteHandler";
+import { AppState } from "application/types";
+import RouteHandler from "application/components/RouteHandler";
 
 import "./App.css";
-import { useState } from "react";
 
 type Props = {
   store: Store<AppState>;

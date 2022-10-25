@@ -1,6 +1,6 @@
-import { RepoLocator } from "../../core";
-import { ExtensionCount } from "../../core/models";
-import { createActionWithPayloadCreator } from "../../store";
+import { RepoLocator } from "core";
+import { ExtensionCount } from "core/models";
+import { createActionWithPayloadCreator } from "store";
 import { FeatureError } from "./types";
 
 export const request = createActionWithPayloadCreator<RepoLocator>(

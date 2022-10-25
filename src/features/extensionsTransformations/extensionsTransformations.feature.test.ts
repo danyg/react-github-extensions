@@ -4,9 +4,10 @@ import {
   SortDirection,
   SortOptions,
   SortType
-} from "../../core";
-import { createFeaturesStore } from "../../store";
-import expectedExtensionsCount from "../../test/expectedExtensionsCount";
+} from "core";
+import { createFeaturesStore } from "store";
+import expectedExtensionsCount from "test/expectedExtensionsCount";
+
 import * as extensionFeature from "../extensions";
 import { selectCurrent } from "../extensions/selectors";
 import * as feature from "./";

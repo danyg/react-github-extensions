@@ -3,7 +3,7 @@ import {
   FileListElement,
   FileList,
   FileListElementType
-} from "../models";
+} from "core/models";
 
 const extensionMatcher = /\.(?<extension>\w+)$/;
 

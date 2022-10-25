@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { ExtensionCount } from "../../../../core";
-import * as extensionFeature from "../../../../features/extensions";
+import { ExtensionCount } from "core";
+import * as extensionFeature from "features/extensions";
 
 import Extension from "../Extension";
 import styles from "./ExtensionList.module.css";

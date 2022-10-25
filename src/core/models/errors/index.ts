@@ -1,4 +1,4 @@
-import { RepoLocator } from "../../types";
+import { RepoLocator } from "core/types";
 
 export class RepositoryNotFound extends Error {
   public readonly owner: string;

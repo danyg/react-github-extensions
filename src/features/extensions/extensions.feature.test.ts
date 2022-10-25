@@ -2,11 +2,11 @@ import {
   MainBranchNotFound,
   RepositoryNotFound,
   ServiceUnreachable
-} from "../../core/models/errors";
-import { createFeaturesStore } from "../../store";
-import expectedExtensionsCount from "../../test/expectedExtensionsCount";
-import { makeApiGithubServerBeforeEachTest } from "../../test/servers/api-github.server";
-import { wait } from "../../test/wait";
+} from "core/models/errors";
+import { createFeaturesStore } from "store";
+import expectedExtensionsCount from "test/expectedExtensionsCount";
+import { makeApiGithubServerBeforeEachTest } from "test/servers/api-github.server";
+import { wait } from "test/wait";
 
 import * as feature from "./";
 import { transformationSuccess } from "./actions";

@@ -1,4 +1,4 @@
-import { AppAction, isAction } from "../../store";
+import { AppAction, isAction } from "store";
 import { searchBy, sortBy } from "./actions";
 import { FeatureState } from "./types";
 

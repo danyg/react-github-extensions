@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import {
   selectLocator,
   isLoading
-} from "../../../../features/extensions/selectors";
+} from "features/extensions/selectors";
 
 import SortTool from "./SortTool";
 import Search from "./Search";

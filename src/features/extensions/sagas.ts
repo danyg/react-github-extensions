@@ -1,13 +1,13 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { RepoLocator, fileListToExtensionCount } from "../../core";
-import { FileList } from "../../core/models";
+import { RepoLocator, fileListToExtensionCount } from "core";
+import { FileList } from "core/models";
 import {
   MainBranchNotFound,
   RepositoryNotFound,
   ServiceUnreachable
-} from "../../core/models/errors";
-import { getFileListFromRepo } from "../../services/github";
-import { ActionWithPayload } from "../../store";
+} from "core/models/errors";
+import { getFileListFromRepo } from "services/github";
+import { ActionWithPayload } from "store";
 import { failure, request, success } from "./actions";
 import { FeatureError } from "./types";
 

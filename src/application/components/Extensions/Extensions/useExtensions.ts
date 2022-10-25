@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { equalsRepoLocator, RepoLocator } from "../../../../core";
+import { equalsRepoLocator, RepoLocator } from "core";
 import {
   MainBranchNotFound,
   RepositoryNotFound,
   ServiceUnreachable
-} from "../../../../core/models/errors";
-import * as extensionFeature from "../../../../features/extensions";
-import { FeatureError } from "../../../../features/extensions/types";
+} from "core/models/errors";
+import * as extensionFeature from "features/extensions";
+import { FeatureError } from "features/extensions/types";
 
 const {
   selectors: {

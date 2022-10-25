@@ -6,10 +6,10 @@ import {
   ExtensionCount,
   SortType,
   SortDirection
-} from "../models";
-import { RepoLocator } from "../types";
-import * as extensionCount from "./";
+} from "core/models";
+import { RepoLocator } from "core/types";
 import { equalsRepoLocator } from "./repoLocatorUtils";
+import * as extensionCount from "./";
 
 describe("extensionList", () => {
   describe("fileListToExtensionCount", () => {

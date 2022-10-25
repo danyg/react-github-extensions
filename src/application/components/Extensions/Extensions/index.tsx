@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
+
 import ExtensionList from "../ExtensionList";
 import NavBar from "../NavBar";
 import useExtensions from "./useExtensions";
 
 import styles from "./Extensions.module.css";
-import { Link } from "react-router-dom";
 
 export default function Extensions() {
   const { isLoading, isError, errorString } = useExtensions();

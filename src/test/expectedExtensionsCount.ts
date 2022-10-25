@@ -1,4 +1,4 @@
-import { ExtensionCount } from "../core";
+import { ExtensionCount } from "core";
 const expectedExtensionsCount: ExtensionCount = {
   editorconfig: 1,
   gitignore: 1,
