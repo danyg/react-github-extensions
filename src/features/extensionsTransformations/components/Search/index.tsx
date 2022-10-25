@@ -10,7 +10,7 @@ export default function Search() {
           🔍
         </span>
       </h2>
-      <input type="text" defaultValue={search} onKeyUp={onKeyUp} />
+      <input type="text" defaultValue={search} onKeyUp={onKeyUp} data-testid="search-input"/>
     </>
   );
 }
