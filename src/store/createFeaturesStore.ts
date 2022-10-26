@@ -5,8 +5,9 @@ import {
   createStore,
   PreloadedState,
   ReducersMapObject,
-  Store
+  Store,
 } from "redux";
+import { composeWithDevTools } from "@redux-devtools/extension";
 import createSagaMiddleware, { Saga } from "redux-saga";
 import { all } from "redux-saga/effects";
 import { AppAction, Feature } from "./types";
@@ -23,6 +24,10 @@ const featuresToReducersMap = (
   reducers: ReducersMapObject<any, any>,
   { name, reducer }: Feature
 ) => ({ ...reducers, [name]: reducer });
+
+const composeEnhancers = composeWithDevTools({
+  // Specify name here, actionsDenylist, actionsCreators and other options if needed
+});
 
 export function createFeaturesStore<StateType>(
   features: Feature[],
@@ -41,7 +46,7 @@ export function createFeaturesStore<StateType>(
   const store = createStore<CombinedState<StateType>, AppAction, any, any>(
     rootReducer,
     initialState,
-    applyMiddleware(sagasMiddleware)
+    composeEnhancers(applyMiddleware(sagasMiddleware))
   );
 
   sagasMiddleware.run(rootSaga);

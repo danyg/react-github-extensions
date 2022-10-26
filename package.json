@@ -19,6 +19,7 @@
     "web-vitals": "~2.1.4"
   },
   "devDependencies": {
+    "@redux-devtools/extension": "^3.2.3",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "miragejs": "~0.1.45"
