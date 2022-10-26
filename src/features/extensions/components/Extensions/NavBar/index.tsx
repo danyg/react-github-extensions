@@ -15,9 +15,9 @@ export default function NavBar() {
 
   return (
     <div className={styles.NavBar}>
-      <div className={styles.tool}>
+      <h1 className={styles.tool}>
         {locator.owner} / {locator.repo}
-      </div>
+      </h1>
 
       <div className={styles.tool}>
         <SortTool />

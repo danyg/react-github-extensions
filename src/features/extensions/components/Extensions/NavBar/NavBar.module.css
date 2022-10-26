@@ -36,3 +36,10 @@ button span {
   line-height: var(--font-size);
   display: inline-block;
 }
+
+.NavBar h1 {
+  font-size: var(--font-size);
+  padding: 0;
+  margin: 0;
+  font-weight: initial;
+}
